@@ -6,6 +6,7 @@ const Testimonials = () => {
     const [showStars1, setShowStars1] = useState(false);
     const [showStars6, setShowStars6] = useState(false);
     const [showdesc,setShowDesc]=useState(false)
+    const [showvideo,setShowVideo]=useState(false)
 
     useEffect(() => {
         const interval1 = setInterval(() => {
@@ -16,7 +17,7 @@ const Testimonials = () => {
         const interval6 = setInterval(() => {
             setShowStars6(true);
             setTimeout(() => setShowStars6(false), 2000);
-        }, 4000);
+        }, 3000);
 
         return () => {
             clearInterval(interval1);
@@ -51,7 +52,7 @@ const Testimonials = () => {
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 group"
                 onMouseEnter={() => {
                     setHovering(true)
-                    setShowDesc(true)
+                    setShowDesc(false)
                 }}
                 onMouseLeave={() => {
                     setHovering(false)
@@ -59,12 +60,16 @@ const Testimonials = () => {
                 }}
             >            
                 {/* top left*/}
-                <div className={`absolute top-54 left-132 group-hover:top-18 group-hover:left-86 group-hover:scale-110 transition-all duration-500 ease-out  hover:shadow-yellow-800 ${hovering ? 'float-animation' : ''}`}>
-                    <div className="h-full w-full rounded-4xl bg-gray-300 overflow-hidden shadow-lg">
-                        <img src="/public/images/image 16.png" 
-                            alt="Profile 1" 
-                            className="w-full h-full object-cover"
-                        />
+                <div className={`absolute top-54 left-132  group-hover:top-18 group-hover:left-86 group-hover:scale-110 transition-all duration-500 ease-out  ${hovering ? 'float-animation' : ''}`}
+                onMouseOver={()=>setShowDesc(true)}
+                onMouseOut={()=>setShowDesc(false)}
+                >
+                    <div className={`h-full w-full rounded-4xl bg-gray-300 overflow-hidden transition-shadow duration-300 ${showdesc? 'shadow-[0_0_30px_10px_rgba(0,255,150,0.6)]': 'shadow-lg'}`}>
+                    <img
+                        src="/public/images/image 16.png"
+                        alt="Profile 1"
+                        className={`w-full h-full object-cover transition-all duration-300 ${showdesc ? 'p-1' : ''}`}
+                    />
                     </div>
                     
                     <div className={`absolute -top-8 -right-4 bg-white rounded-lg px-4 py-2 shadow-lg transition-all duration-300  ${showStars1 ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
@@ -78,15 +83,15 @@ const Testimonials = () => {
                         </div>
                         <div className="absolute  -bottom-1 left-30 w-3 h-3 bg-white rotate-45 "></div>
                     </div>
-                    <div className={`absolute top-16 left-[-130px] z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify transition-all duration-300 w-[329px] h-[170px] flex ${showdesc ? 'opacity-100 scale-100 transition-all duration-200' : 'opacity-0 scale-75'}`}>
+                    <div className={`absolute top-16 left-[-130px] z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify transition-all duration-300 w-[329px] h-[170px]  ${showdesc ? 'opacity-100 scale-100 transition-all duration-500 ease-in' : 'opacity-0 scale-75'}`}>
                         <div className="absolute  -top-1 left-50 w-3 h-3 bg-white -z-30 rotate-45"></div>
-                        <div>
-                            <p className='text-xs'>I was amazed and impressed by the course structure as it was distinctly different from other courses in the market. The classes were highly interactive and the instructor was very humble and friendly. Recordings of the classes were provided within a short time after each class, which made revision very easy and beneficial. I have recommended the same course to my data-enthusiast friends.</p>
-                            <div className='text-end mt-[-10px] text-xs font-semibold '>
-                                <p>Rajesh Dhakal</p>
-                                <p>Digital Marketing Student</p>  
-                            </div>                      
-                        </div>
+                            <div>
+                                <p className='text-xs'>I was amazed and impressed by the course structure as it was distinctly different from other courses in the market. The classes were highly interactive and the instructor was very humble and friendly. Recordings of the classes were provided within a short time after each class, which made revision very easy and beneficial. I have recommended the same course to my data-enthusiast friends.</p>
+                                <div className='text-end mt-[-10px] text-xs font-semibold '>
+                                    <p>Rajesh Dhakal</p>
+                                    <p>Digital Marketing Student</p>  
+                                </div>                      
+                            </div>
                     </div>
                 </div>
                 {/* top right*/}
@@ -130,7 +135,9 @@ const Testimonials = () => {
                     </div>
                 </div>
                 {/* bottom right*/}
-                <div className={`absolute bottom-57 right-160 group-hover:bottom-22 group-hover:right-110 group-hover:scale-110 transition-all duration-500 ease-out ${hovering ? 'float-animation-slow' : ''}`}>
+                <div className={`absolute bottom-57 right-160 group-hover:bottom-22 group-hover:right-110 group-hover:scale-110 transition-all duration-500 ease-out ${hovering ? 'float-animation-slow' : ''}`}
+                onMouseOver={()=>setShowVideo(true)}
+                onMouseOut={()=>setShowVideo(false)}>
                     <div className="w-full h-full rounded-4xl bg-gray-300 overflow-hidden shadow-lg">
                         <img 
                             src="/public/images/video.png" 
@@ -147,6 +154,12 @@ const Testimonials = () => {
                             </div>
                         </div>
                         <div className="absolute -bottom-1 right-4 w-2 h-2 bg-white rotate-45 border-b border-r border-gray-200"></div>
+                    </div>
+                    <div className={`absolute top-16 left-[-130px] z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify transition-all duration-300 w-[329px] h-[170px]  ${showvideo ? 'opacity-100 scale-100 transition-all duration-500 ease-in' : 'opacity-0 scale-75'}`}>
+                        <div className="absolute  -top-1 left-50 w-3 h-3 bg-white -z-30 rotate-45"></div>
+                            <div>
+                                <iframe src="" frameborder="0"></iframe>
+                            </div>
                     </div>
                 </div>
 
