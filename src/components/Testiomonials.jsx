@@ -138,11 +138,11 @@ const Testimonials = () => {
                 <div className={`absolute bottom-57 right-160 group-hover:bottom-22 group-hover:right-110 group-hover:scale-110 transition-all duration-500 ease-out ${hovering ? 'float-animation-slow' : ''}`}
                 onMouseOver={()=>setShowVideo(true)}
                 onMouseOut={()=>setShowVideo(false)}>
-                    <div className="w-full h-full rounded-4xl bg-gray-300 overflow-hidden shadow-lg">
+                    <div className={`w-full h-full rounded-4xl bg-gray-300 overflow-hidden transition-shadow duration-300 ${showvideo? 'shadow-[0_0_30px_10px_rgba(0,255,150,0.6)]': 'shadow-lg'}`}>
                         <img 
                             src="/public/images/video.png" 
                             alt="Profile 6" 
-                            className="w-full h-full object-cover"
+                            className={`w-full h-full object-cover transition-all duration-300 ${showvideo ? 'p-1' : ''}`}
                         />
                     </div>
                     <div className={`absolute -top-8 -left-8 bg-white rounded-lg px-4 py-2 shadow-lg transition-all duration-300 ${showStars6 ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
@@ -158,7 +158,7 @@ const Testimonials = () => {
                     <div className={`absolute top-16 left-[-130px] z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify transition-all duration-300 w-[329px] h-[170px]  ${showvideo ? 'opacity-100 scale-100 transition-all duration-500 ease-in' : 'opacity-0 scale-75'}`}>
                         <div className="absolute  -top-1 left-50 w-3 h-3 bg-white -z-30 rotate-45"></div>
                             <div>
-                                <iframe src="" frameborder="0"></iframe>
+                                <iframe src="" frameborder="0"/>
                             </div>
                     </div>
                 </div>
