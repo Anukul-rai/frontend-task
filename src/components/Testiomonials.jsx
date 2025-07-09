@@ -57,8 +57,7 @@ const Testimonials = () => {
                 onMouseLeave={() => {
                     setHovering(false)
                     setShowDesc(false)
-                }}
-            >            
+                }}>            
                 {/* top left*/}
                 <div className={`absolute top-54 left-132  group-hover:top-18 group-hover:left-86 group-hover:scale-110 transition-all duration-500 ease-out  ${hovering ? 'float-animation' : ''}`}
                 onMouseOver={()=>setShowDesc(true)}
@@ -145,7 +144,7 @@ const Testimonials = () => {
                             className={`w-full h-full object-cover transition-all duration-300 ${showvideo ? 'p-1' : ''}`}
                         />
                     </div>
-                    <div className={`absolute -top-8 -left-8 bg-white rounded-lg px-4 py-2 shadow-lg transition-all duration-300 ${showStars6 ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
+                    <div className={`absolute top-23 left-9 bg-white rounded-lg px-4 py-2 shadow-lg transition-all duration-300 ${showStars6 ? 'opacity-100 scale-100' : 'opacity-0 scale-75'}`}>
                         <div className="flex items-center gap-1">
                             <div className="flex">
                                 {[...Array(5)].map((_, i) => (
@@ -153,13 +152,13 @@ const Testimonials = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="absolute -bottom-1 right-4 w-2 h-2 bg-white rotate-45 border-b border-r border-gray-200"></div>
+                        <div className="absolute bottom-6 right-25 w-4 h-4 bg-white rotate-45"></div>
                     </div>
-                    <div className={`absolute top-16 left-[-130px] z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify transition-all duration-300 w-[329px] h-[170px]  ${showvideo ? 'opacity-100 scale-100 transition-all duration-500 ease-in' : 'opacity-0 scale-75'}`}>
-                        <div className="absolute  -top-1 left-50 w-3 h-3 bg-white -z-30 rotate-45"></div>
-                            <div>
+                    <div className={`absolute bottom-25 right-1 z-50 bg-white rounded-lg px-6 py-2 shadow-lg text-justify  w-[185px] h-[313.24px]  ${showvideo ? 'opacity-100 scale-100 transition-all duration-700 ease-in' : 'opacity-0 scale-75'}`}>
+                            <div className='border h-[300px] rounded-lg '>
                                 <iframe src="" frameborder="0"/>
                             </div>
+                            <div className="absolute  -bottom-1 left-30 w-3 h-3 bg-white rotate-45 "></div>
                     </div>
                 </div>
 
