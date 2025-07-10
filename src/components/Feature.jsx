@@ -54,14 +54,16 @@ const Feature = () => {
                 </div>
             </div>            
             {/* Card 3: Get Mentored & Supported */}
-            <div className="rounded-3xl p-8 text-white relative mb-2 min-h-[300px] bg-[#6C64A8]">
-                <div className="flex items-center justify-between h-full">
-                    <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (2).png" alt="" className="absolute top-15 -left-21"/>
-                    </div>
-                    <div className="flex-1 ml-6 text-right">
+            <div className="rounded-3xl  text-white relative mb-2 min-h-[300px] bg-[#6C64A8]">
+                <div className="flex items-center justify-center">
+                    <img src="/public/images/Group (2).png" alt="" className="absolute top-15 -left-21"/>
+                </div>
+                <div className="flex items-center  h-full w-100">
+                    <div className=" text-right -mr-42">
+                        <div className='-mt-14'>
                         <h2 className="text-2xl font-bold mb-3">Get Mentored & Supported</h2>
                         <p className="text-lg font-medium mb-4">You're not learning alone.</p>
+                        </div>
                         <p className="text-sm leading-relaxed opacity-90">
                         Stuck or need feedback? SkillShikshya's community of mentors and learners has your back with live support, interactive discussions, and expert insights. You're never on your own.
                         </p>
