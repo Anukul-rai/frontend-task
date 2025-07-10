@@ -206,7 +206,7 @@ const Testimonials = () => {
                             <span className="text-yellow-500 ml-1">🤝</span>
                         </h1>
                     </div>
-                    <div className="flex flex-row justify-center gap-3 text-gray-700 hover:gap-4 transition-colors cursor-pointer">
+                    <div className="flex flex-row justify-center gap-1 text-gray-700 hover:gap-4 transition-colors cursor-pointer">
                         <span className="mb-1 font-semibold">View all Testimonials</span>
                         <IoMdArrowForward size={28}/>
                     </div>
