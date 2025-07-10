@@ -3,7 +3,7 @@ import React from 'react';
 
 const Feature = () => {
     return (
-        <div className="min-h-screen p-6" style={{background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)'}}>
+        <div className="min-h-screen p-6">
         <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="mb-8">
@@ -54,10 +54,10 @@ const Feature = () => {
                 </div>
             </div>            
             {/* Card 3: Get Mentored & Supported */}
-            <div className="rounded-3xl p-8 text-white relative overflow-hidden min-h-[300px] bg-[#6C64A8]">
+            <div className="rounded-3xl p-8 text-white relative mb-2 min-h-[300px] bg-[#6C64A8]">
                 <div className="flex items-center justify-between h-full">
                     <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (2).png" alt="" className="max-h-32 w-auto object-contain"/>
+                        <img src="/public/images/Group (2).png" alt="" className="absolute top-15 -left-21"/>
                     </div>
                     <div className="flex-1 ml-6 text-right">
                         <h2 className="text-2xl font-bold mb-3">Get Mentored & Supported</h2>
@@ -70,17 +70,19 @@ const Feature = () => {
             </div>
             
             {/* Card 4: Achieve & Showcase */}
-            <div className="rounded-3xl p-8 text-white relative overflow-hidden min-h-[300px] bg-[#A88964]">
-                <div className="flex items-center justify-between h-full">
-                    <div className="flex-1 mr-6">
+            <div className="rounded-3xl text-white relative  min-h-[300px] bg-[#A88964] mb-2">
+                <div className="flex items-center justify-between h-full w-100">
+                    <div className="mr-4 px-6">
+                        <div className='-mt-5'>
                         <h2 className="text-2xl font-bold mb-3">Achieve & Showcase</h2>
                         <p className="text-lg font-medium mb-4">Build your portfolio, get job-ready.</p>
+                        </div>
                         <p className="text-sm leading-relaxed opacity-90">
                         Your journey ends with achievement. Each completed project builds a portfolio showcasing your skills and job-readiness, bringing you closer to that dream job, promotion, or your own venture.
                         </p>
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (3).png" alt="" className="max-h-32 w-auto object-contain"/>
+                        <img src="/public/images/Group (3).png" alt="" className="absolute top-[19px] -right-14"/>
                     </div>
                 </div>
             </div>
