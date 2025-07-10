@@ -9,13 +9,12 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar/>
-      <Routes>
-      <Route path='/' element={<Testiomonials/>}/>
-      <Route path='/feature' element={<Feature/>}/>
-      <Route path='/stats' element={<Stats/>}/>
-      </Routes>
-      
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Testiomonials/>}/>
+          <Route path='/feature' element={<Feature/>}/>
+          <Route path='/stats' element={<Stats/>}/>
+        </Routes>
       </BrowserRouter>
     </div>
   )
