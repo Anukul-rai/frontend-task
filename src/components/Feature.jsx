@@ -37,10 +37,44 @@ const Feature = () => {
             {/* Cards Grid - 2x2 */}
             <div className="grid grid-cols-2 gap-11">
             {/* Card 1: Start with Clarity */}
-            <div className="rounded-3xl p-8 text-white relative min-h-[300px] bg-[#F45B5B] mb-2">
-                <div className="flex items-center justify-center">
-                        <img src="/public/images/Group.png" alt="pfp-1" className="absolute top-[4px] right-94 h-97 float-img"/>
+            <div className="rounded-3xl p-8 text-white relative min-h-[300px] bg-[#F45B5B] mb-2"
+            onMouseEnter={()=>setShow(true)}
+            onMouseLeave={()=>setShow(false)}>
+                <div className={`absolute inset-0 transition-all duration-500 ${show ? 'opacity-100 translate-x-0 bg-white rounded-3xl' : 'opacity-0 translate-x-full'}`}>
+                    <div className="rounded-3xl p-5 relative min-h-[300px] bg-[url('/public/images/subtract.png')] bg-cover bg-center mb-2">
+                            <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center absolute -left-0.5 top-1/2 -translate-y-1/2 z-10  cursor-pointer shadow-2xl shadow-black">
+                            <FaArrowLeft className="text-black text-xl" />
+                            </button>
+                        <div className="relative">
+                            <img
+                            src="/images/red bg.png"
+                            alt="User"
+                            className="w-82 h-80 absolute rounded-xl z-10 -top-[40px] left-[47px] "
+                            />
+                            <img
+                            src="/images/wow.png"
+                            alt="Wow"
+                            className="absolute top-6 left-16  h-20 w-20"
+                            />
+                            <img
+                            src="/images/wow.png"
+                            alt="Wow"
+                            className="absolute top-40 right-30 rotate-y-180 rotate-40 h-20 w-20 drop-shadow-3xl "
+                            />
+                        </div>
+                        <div className="text-white text-left absolute left-80 top-10 ">
+                            <h2 className="text-xl font-bold">
+                            Clarity unlocked—<br />
+                            stickers, sips, and skills all in one go!
+                            </h2>
+                        </div>
+                        <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center absolute -right-0.5 top-1/2 -translate-y-1/2 z-10  cursor-pointer shadow-2xl shadow-black">
+                            <FaArrowRight className="text-black text-xl" />
+                        </button>
+                    </div>
                 </div>
+                    <div className={`mt-12 transition-all duration-500 ease-in-out ${show ? "-translate-x-[130%]" : "translate-x-0"}`}>
+                        <img src="/images/Group.png" alt="pfp-1" className="absolute -top-[70px] right-84 h-97 float-img"/>
                 <div className="flex items-center justify-between h-full w-100">
                     <div className=" text-right  -mr-37 -mt-8  pl-47 relative z-10">
                         <div className=''>
@@ -50,46 +84,10 @@ const Feature = () => {
                         <p className="text-sm leading-relaxed opacity-90">
                         Overwhelmed by too many learning options? SkillShikshya provides a clear, curated roadmap from the start. Whether you're a beginner or upskilling, we have a path tailored to your growth.
                         </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="rounded-3xl p-5 text-white relative min-h-[300px] bg-[#F45B5B] mb-2">
-                {/* Left Arrow */}
-                <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2 z-10">
-                    <FaArrowLeft className="text-black text-xl" />
-                </button>
-
-                <div className="relative">
-                    <img
-                    src="/public/images/red bg.png"
-                    alt="User"
-                    className="w-82 h-80 absolute rounded-xl z-10 -top-[40px] left-[47px] "
-                    />
-                    {/* WOW Bubble 1 */}
-                    <img
-                    src="/public/images/wow.png"
-                    alt="Wow"
-                    className="absolute top-6 left-16 w-16 h-20 w-20"
-                    />
-                    <img
-                    src="/public/images/wow.png"
-                    alt="Wow"
-                    className="absolute top-40 right-30 rotate-y-180 rotate-40 h-20 w-20 drop-shadow-3xl "
-                    />
-                </div>
-                <div className="text-white text-left absolute left-80 top-10 ">
-                    <h2 className="text-xl font-bold">
-                    Clarity unlocked—<br />
-                    stickers, sips, and skills all in one go!
-                    </h2>
-                </div>
-
-                {/* Right Arrow */}
-                <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center  absolute right-4 top-1/2 -translate-y-1/2 z-10">
-                    <FaArrowRight className="text-black text-xl" />
-                </button>
-            </div>
-            
             {/* Card 2: Learn by Doing */}
             <div className="rounded-3xl text-white relative  min-h-[300px]  bg-[#5492A0] mb-2">
                 <div className="flex items-center justify-between  h-full w-100 ">
@@ -104,7 +102,7 @@ const Feature = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (1).png" alt="" className="absolute top-[4px] right-4 h-100 float-img"/>
+                        <img src="/images/Group (1).png" alt="" className="absolute top-[4px] right-4 h-100 float-img"/>
                 </div>
             </div>            
             {/* Card 3: Get Mentored & Supported */}
@@ -124,7 +122,6 @@ const Feature = () => {
                 </div>
             </div>
             </div>
-            
             {/* Card 4: Achieve & Showcase */}
             <div className="rounded-3xl text-white relative  min-h-[300px] bg-[#A88964] mb-2">
                 <div className="flex items-center justify-between h-full w-100">
