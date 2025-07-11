@@ -15,16 +15,32 @@ const Feature = () => {
                 <span className="text-3xl">🚀</span>
             </h1>
             </div>
+            <style>
+                {`
+                .float-img {
+                    animation: floatUpDown 4s ease-in-out infinite;
+                }
+
+                @keyframes floatUpDown {
+                    0%, 100% {
+                    transform: translateY(0);
+                    }
+                    50% {
+                    transform: translateY(-15px);
+                    }
+                }
+                `}
+            </style>
             
             {/* Cards Grid - 2x2 */}
             <div className="grid grid-cols-2 gap-11">
             {/* Card 1: Start with Clarity */}
             <div className="rounded-3xl p-8 text-white relative min-h-[300px] bg-[#F45B5B] mb-2">
                 <div className="flex items-center justify-center">
-                        <img src="/public/images/Group.png" alt="pfp-1" className="absolute top-[4px] right-94 h-97"/>
+                        <img src="/public/images/Group.png" alt="pfp-1" className="absolute top-[4px] right-94 h-97 float-img"/>
                     </div>
                 <div className="flex items-center justify-between h-full w-100">
-                    <div className=" text-right  -mr-37 -mt-8">
+                    <div className=" text-right  -mr-37 -mt-8  pl-47 relative z-10">
                     <div className=''>
                         <h2 className="text-2xl font-bold mb-3">Start with Clarity</h2>
                         <p className="text-lg font-medium mb-4">Step into a better learning path.</p>
@@ -50,25 +66,25 @@ const Feature = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (1).png" alt="" className="absolute top-[4px] right-4 h-100"/>
+                        <img src="/public/images/Group (1).png" alt="" className="absolute top-[4px] right-4 h-100 float-img"/>
                 </div>
             </div>            
             {/* Card 3: Get Mentored & Supported */}
-            <div className="rounded-3xl  text-white relative mb-2 min-h-[300px] bg-[#6C64A8]">
-                <div className="flex items-center justify-center">
-                    <img src="/public/images/Group (2).png" alt="" className="absolute top-15 -left-21"/>
+            <div className="rounded-3xl text-white relative mb-2 min-h-[300px] bg-[#6C64A8] ">
+            <img
+                src="/images/Group (2).png"
+                alt=""
+                className="absolute top-12 -left-28 w-100 z-0 float-img"
+            />
+            <div className="flex items-center h-full w-full justify-end pr-10 pl-62 relative z-10">
+                <div className="text-right max-w-md">
+                <h2 className="text-2xl font-bold mb-3">Get Mentored & Supported</h2>
+                <p className="text-lg font-medium mb-4">You're not learning alone.</p>
+                <p className="text-sm leading-relaxed opacity-90">
+                    Stuck or need feedback? SkillShikshya's community of mentors and learners has your back with live support, interactive discussions, and expert insights. You're never on your own.
+                </p>
                 </div>
-                <div className="flex items-center  h-full w-100">
-                    <div className=" text-right -mr-42">
-                        <div className='-mt-14'>
-                        <h2 className="text-2xl font-bold mb-3">Get Mentored & Supported</h2>
-                        <p className="text-lg font-medium mb-4">You're not learning alone.</p>
-                        </div>
-                        <p className="text-sm leading-relaxed opacity-90">
-                        Stuck or need feedback? SkillShikshya's community of mentors and learners has your back with live support, interactive discussions, and expert insights. You're never on your own.
-                        </p>
-                    </div>
-                </div>
+            </div>
             </div>
             
             {/* Card 4: Achieve & Showcase */}
@@ -84,7 +100,7 @@ const Feature = () => {
                         </p>
                     </div>
                     <div className="flex items-center justify-center">
-                        <img src="/public/images/Group (3).png" alt="" className="absolute top-[19px] -right-14"/>
+                        <img src="/public/images/Group (3).png" alt="" className="absolute top-[19px] -right-14 float-img"/>
                     </div>
                 </div>
             </div>
