@@ -10,6 +10,7 @@ function Navbar() {
                 <Link to="/" className='cursor-pointer hover:text-gray-700 '>Testimonials</Link>
                 <Link to="/feature" className='cursor-pointer hover:text-gray-700'>Features</Link>
                 <Link to="/stats" className='cursor-pointer hover:text-gray-700'>Stats</Link>
+                <Link to="/drive" className='cursor-pointer hover:text-gray-700'>Drive</Link>
             </ul>
         </div>
         
