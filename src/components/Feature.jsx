@@ -1,7 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 
 const Feature = () => {
+    const[show,setShow]=useState(false)
     return (
         <div className="min-h-screen p-6">
         <div className="max-w-7xl mx-auto">
@@ -31,25 +34,60 @@ const Feature = () => {
                 }
                 `}
             </style>
-            
             {/* Cards Grid - 2x2 */}
             <div className="grid grid-cols-2 gap-11">
             {/* Card 1: Start with Clarity */}
             <div className="rounded-3xl p-8 text-white relative min-h-[300px] bg-[#F45B5B] mb-2">
                 <div className="flex items-center justify-center">
                         <img src="/public/images/Group.png" alt="pfp-1" className="absolute top-[4px] right-94 h-97 float-img"/>
-                    </div>
+                </div>
                 <div className="flex items-center justify-between h-full w-100">
                     <div className=" text-right  -mr-37 -mt-8  pl-47 relative z-10">
-                    <div className=''>
-                        <h2 className="text-2xl font-bold mb-3">Start with Clarity</h2>
-                        <p className="text-lg font-medium mb-4">Step into a better learning path.</p>
-                    </div>
+                        <div className=''>
+                            <h2 className="text-2xl font-bold mb-3">Start with Clarity</h2>
+                            <p className="text-lg font-medium mb-4">Step into a better learning path.</p>
+                        </div>
                         <p className="text-sm leading-relaxed opacity-90">
                         Overwhelmed by too many learning options? SkillShikshya provides a clear, curated roadmap from the start. Whether you're a beginner or upskilling, we have a path tailored to your growth.
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="rounded-3xl p-5 text-white relative min-h-[300px] bg-[#F45B5B] mb-2">
+                {/* Left Arrow */}
+                <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center absolute left-4 top-1/2 -translate-y-1/2 z-10">
+                    <FaArrowLeft className="text-black text-xl" />
+                </button>
+
+                <div className="relative">
+                    <img
+                    src="/public/images/red bg.png"
+                    alt="User"
+                    className="w-82 h-80 absolute rounded-xl z-10 -top-[40px] left-[47px] "
+                    />
+                    {/* WOW Bubble 1 */}
+                    <img
+                    src="/public/images/wow.png"
+                    alt="Wow"
+                    className="absolute top-6 left-16 w-16 h-20 w-20"
+                    />
+                    <img
+                    src="/public/images/wow.png"
+                    alt="Wow"
+                    className="absolute top-40 right-30 rotate-y-180 rotate-40 h-20 w-20 drop-shadow-3xl "
+                    />
+                </div>
+                <div className="text-white text-left absolute left-80 top-10 ">
+                    <h2 className="text-xl font-bold">
+                    Clarity unlocked—<br />
+                    stickers, sips, and skills all in one go!
+                    </h2>
+                </div>
+
+                {/* Right Arrow */}
+                <button className="bg-white w-17 h-17 rounded-full flex items-center justify-center  absolute right-4 top-1/2 -translate-y-1/2 z-10">
+                    <FaArrowRight className="text-black text-xl" />
+                </button>
             </div>
             
             {/* Card 2: Learn by Doing */}
